@@ -7,24 +7,84 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class signInVC: UIViewController {
 
+    @IBOutlet weak var emailText: UITextField!
+    @IBOutlet weak var passwordText: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
+    }
+    
+    @IBAction func signInClicked(_ sender: Any) {
+        
+        if emailText.text != "" && passwordText.text != "" {
+            
+            Auth.auth().signIn(withEmail: emailText.text!, password: passwordText.text!) { (userdata, error) in
+                if error != nil {
+                    let alert = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: UIAlertController.Style.alert)
+                    let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
+                    alert.addAction(okButton)
+                    self.present(alert, animated: true, completion: nil)
+                } else {
+                    
+                    UserDefaults.standard.set(userdata!.user.email, forKey: "user")
+                    UserDefaults.standard.synchronize()
+                    
+                    let delegate : AppDelegate = UIApplication.shared.delegate as! AppDelegate
+                    
+                    delegate.rememberUser()
+                    
+                }
+            }
+            
+        } else {
+            let alert = UIAlertController(title: "Error", message: "Username/Password?", preferredStyle: UIAlertController.Style.alert)
+            let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
+            alert.addAction(okButton)
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+        
+        
+     
     }
     
 
-    /*
-    // MARK: - Navigation
+    @IBAction func signUpClicked(_ sender: Any) {
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if emailText.text != "" && passwordText.text != "" {
+            Auth.auth().createUser(withEmail: emailText.text!, password: passwordText.text!) { (userdata, error) in
+                if error != nil {
+                    let alert = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: UIAlertController.Style.alert)
+                    let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
+                    alert.addAction(okButton)
+                    self.present(alert, animated: true, completion: nil)
+                } else {
+                    
+                    UserDefaults.standard.set(userdata!.user.email, forKey: "user")
+                    UserDefaults.standard.synchronize()
+                    
+                    let delegate : AppDelegate = UIApplication.shared.delegate as! AppDelegate
+                    
+                    delegate.rememberUser()
+                }
+            }
+        } else {
+            let alert = UIAlertController(title: "Error", message: "Username/Password?", preferredStyle: UIAlertController.Style.alert)
+            let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
+            alert.addAction(okButton)
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+        
+
     }
-    */
-
+    
 }
