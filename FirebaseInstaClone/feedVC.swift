@@ -27,12 +27,56 @@ class feedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.delegate = self
         tableView.dataSource = self
         
-        getDataFromFirebase()
+        //FIRESTORE
+        
+        getDataFromFirestore()
+        
+        //FIREBASE REALTIMEDATABASE
+        //getDataFromFirebase()
         
     }
     
+    func getDataFromFirestore(){
+        
+        let fireStoreDatabase = Firestore.firestore()
+        
+        fireStoreDatabase.collection("Posts").order(by: "date", descending: true).addSnapshotListener { (snapshot, error) in
+            
+            if error != nil {
+                print(error?.localizedDescription)
+            } else {
+                
+                self.userImageArray.removeAll(keepingCapacity: false)
+                self.userCommentArray.removeAll(keepingCapacity: false)
+                self.userEmailArray.removeAll(keepingCapacity: false)
+                
+                if snapshot?.isEmpty != true {
+                    for document in (snapshot!.documents) {
+                        
+                        let postText = document.get("posttext") as! String
+                        let postedBy = document.get("postedby") as! String
+                        let imageurl = document.get("image") as! String
+                        
+                        self.userImageArray.append(imageurl)
+                        self.userEmailArray.append(postedBy)
+                        self.userCommentArray.append(postText)
+                    }
+                    
+                    self.tableView.reloadData()
+                }
+                
+                
+            }
+            
+        }
+        
+    }
+    
+    
+    
     func getDataFromFirebase() {
         
+    
         let databaseReference = Database.database().reference()
         
         databaseReference.child("users").observe(DataEventType.childAdded) { (snapshot) in
@@ -59,6 +103,7 @@ class feedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             self.tableView.reloadData()
             
         }
+ 
         
     }
     

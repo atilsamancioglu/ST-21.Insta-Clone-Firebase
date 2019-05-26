@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3C6E5BA0BB397E00B399D580 /* Pods_FirebaseInstaClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A79E3E53E918306612650C21 /* Pods_FirebaseInstaClone.framework */; };
+		FC55E75922996CE20090C020 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC55E75822996CE10090C020 /* GoogleService-Info.plist */; };
 		FCA6AA752168A74400ACA3E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA6AA742168A74400ACA3E3 /* AppDelegate.swift */; };
 		FCA6AA772168A74400ACA3E3 /* feedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA6AA762168A74400ACA3E3 /* feedVC.swift */; };
 		FCA6AA792168A74400ACA3E3 /* uploadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA6AA782168A74400ACA3E3 /* uploadVC.swift */; };
@@ -15,7 +16,6 @@
 		FCA6AA7E2168A74500ACA3E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCA6AA7D2168A74500ACA3E3 /* Assets.xcassets */; };
 		FCA6AA812168A74500ACA3E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCA6AA7F2168A74500ACA3E3 /* LaunchScreen.storyboard */; };
 		FCA6AA892168A85500ACA3E3 /* signInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA6AA882168A85500ACA3E3 /* signInVC.swift */; };
-		FCA6AA8B2168AB3A00ACA3E3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCA6AA8A2168AB3A00ACA3E3 /* GoogleService-Info.plist */; };
 		FCA6AA8D2168BE4200ACA3E3 /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = FCA6AA8C2168BE4200ACA3E3 /* image.png */; };
 		FCA6AA8F2168E89E00ACA3E3 /* feedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA6AA8E2168E89E00ACA3E3 /* feedCell.swift */; };
 /* End PBXBuildFile section */
@@ -24,6 +24,7 @@
 		017FE8754BE24A91194D0E61 /* Pods-FirebaseInstaClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseInstaClone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseInstaClone/Pods-FirebaseInstaClone.debug.xcconfig"; sourceTree = "<group>"; };
 		A79E3E53E918306612650C21 /* Pods_FirebaseInstaClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseInstaClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAF4AD8B479E41A71D6238E5 /* Pods-FirebaseInstaClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseInstaClone.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseInstaClone/Pods-FirebaseInstaClone.release.xcconfig"; sourceTree = "<group>"; };
+		FC55E75822996CE10090C020 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FCA6AA712168A74400ACA3E3 /* FirebaseInstaClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseInstaClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCA6AA742168A74400ACA3E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCA6AA762168A74400ACA3E3 /* feedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = feedVC.swift; sourceTree = "<group>"; };
@@ -33,7 +34,6 @@
 		FCA6AA802168A74500ACA3E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FCA6AA822168A74500ACA3E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCA6AA882168A85500ACA3E3 /* signInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signInVC.swift; sourceTree = "<group>"; };
-		FCA6AA8A2168AB3A00ACA3E3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FCA6AA8C2168BE4200ACA3E3 /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.png; sourceTree = "<group>"; };
 		FCA6AA8E2168E89E00ACA3E3 /* feedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = feedCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,7 +98,7 @@
 				FCA6AA7D2168A74500ACA3E3 /* Assets.xcassets */,
 				FCA6AA7F2168A74500ACA3E3 /* LaunchScreen.storyboard */,
 				FCA6AA822168A74500ACA3E3 /* Info.plist */,
-				FCA6AA8A2168AB3A00ACA3E3 /* GoogleService-Info.plist */,
+				FC55E75822996CE10090C020 /* GoogleService-Info.plist */,
 			);
 			path = FirebaseInstaClone;
 			sourceTree = "<group>";
@@ -137,6 +137,7 @@
 				TargetAttributes = {
 					FCA6AA702168A74300ACA3E3 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -164,8 +165,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCA6AA812168A74500ACA3E3 /* LaunchScreen.storyboard in Resources */,
-				FCA6AA8B2168AB3A00ACA3E3 /* GoogleService-Info.plist in Resources */,
 				FCA6AA7E2168A74500ACA3E3 /* Assets.xcassets in Resources */,
+				FC55E75922996CE20090C020 /* GoogleService-Info.plist in Resources */,
 				FCA6AA7C2168A74400ACA3E3 /* Main.storyboard in Resources */,
 				FCA6AA8D2168BE4200ACA3E3 /* image.png in Resources */,
 			);
@@ -199,18 +200,32 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FirebaseInstaClone/Pods-FirebaseInstaClone-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/libwebp/libwebp.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libwebp.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -381,10 +396,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7SH627DBA4;
 				INFOPLIST_FILE = FirebaseInstaClone/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.atilsamancioglu.FirebaseInstaClone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -397,10 +415,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7SH627DBA4;
 				INFOPLIST_FILE = FirebaseInstaClone/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.atilsamancioglu.FirebaseInstaClone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

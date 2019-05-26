@@ -11,6 +11,7 @@ import Firebase
 import FirebaseStorage
 import FirebaseAuth
 import FirebaseDatabase
+import FirebaseFirestore
 
 class uploadVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -56,7 +57,7 @@ class uploadVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
             
         //}
         
-        //swift 4.2
+        //swift 5
         if let data = imageView.image?.jpegData(compressionQuality: 0.5) {
             
             let uuid = NSUUID().uuidString
@@ -77,10 +78,32 @@ class uploadVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
                             
                             let imageURL = url?.absoluteString
                             
+                            //FIRESTORE
+                            
+                            let fireStoreDatabase = Firestore.firestore()
+                            
+                            let fireStorePost = ["image" : imageURL!, "postedby" : Auth.auth().currentUser!.email!,"posttext" : self.commentText.text!,"date" : FieldValue.serverTimestamp()] as [String : Any]
+                            
+                            var fireStoreReference : DocumentReference? = nil
+                            
+                            fireStoreReference = fireStoreDatabase.collection("Posts").addDocument(data: fireStorePost) {err in
+                                if let err = err {
+                                    print(err.localizedDescription)
+                                } else {
+                                    print("Documend saved ID: \(fireStoreReference?.documentID)")
+                                }
+                            }
+                            
+                        
+                            
+                            //REAL TIME DATABASE
+                            /*
                             let databaseReference = Database.database().reference()
                             
                             let post = ["image" : imageURL!, "postedby" : Auth.auth().currentUser!.email!, "posttext" : self.commentText.text!, "uuid" : uuid] as [String : Any]
                             databaseReference.child("users").child((Auth.auth().currentUser?.uid)!).child("post").childByAutoId().setValue(post)
+ 
+                            */
                             
                             self.imageView.image = UIImage(named: "image.png")
                             self.commentText.text = ""
