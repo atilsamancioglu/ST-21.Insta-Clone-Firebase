@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>474955973720-k6kvfcjjstb7h6ja359hm94nk5tnkfn2.apps.googleusercontent.com</string>
+	<string>PLACE YOUR OWN CLIENT ID/string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.474955973720-k6kvfcjjstb7h6ja359hm94nk5tnkfn2</string>
+	<string>PLACE YOUR OWN CLIENT ID</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBkVestqXcI9hlCveCshpMEx88cxbr4ShI</string>
+	<string>PLACE YOUR OWN API KEY</string>
 	<key>GCM_SENDER_ID</key>
-	<string>474955973720</string>
+	<string>PLACE YOUR OWN SENDER ID</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
@@ -29,8 +29,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:474955973720:ios:c334c2efef67dfd3</string>
+	<string>PLACE YOUR OWN APP ID</string>
 	<key>DATABASE_URL</key>
-	<string>https://instacloneios-f521c.firebaseio.com</string>
+	<string>PLACE YOUR OWN DATABASE URL</string>
 </dict>
 </plist>
